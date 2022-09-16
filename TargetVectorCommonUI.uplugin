@@ -14,13 +14,16 @@
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
 	"Installed": false,
+	"Modules": [
+		{
+			"Name": "TargetVectorCommonUI",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "CommonUI",
-			"Enabled": true
-		},
-		{
-			"Name": "CommonGame",
 			"Enabled": true
 		},
 		{
@@ -28,11 +31,7 @@
 			"Enabled": true
 		},
 		{
-			"Name": "ALS",
-			"Enabled": true
-		},
-		{
-			"Name": "ALSXT",
+			"Name": "CommonGame",
 			"Enabled": true
 		},
 		{
