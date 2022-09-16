@@ -26,6 +26,18 @@
 		{
 			"Name": "CommonUser",
 			"Enabled": true
+		},
+		{
+			"Name": "ALS",
+			"Enabled": true
+		},
+		{
+			"Name": "ALSXT",
+			"Enabled": true
+		},
+		{
+			"Name": "TargetVectorEOS",
+			"Enabled": true
 		}
 	]
 }
