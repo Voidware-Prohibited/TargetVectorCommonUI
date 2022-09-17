@@ -37,6 +37,14 @@
 		{
 			"Name": "TargetVectorEOS",
 			"Enabled": true
+		},
+		{
+			"Name": "ALS",
+			"Enabled": true
+		},
+		{
+			"Name": "ALSXT",
+			"Enabled": true
 		}
 	]
 }
