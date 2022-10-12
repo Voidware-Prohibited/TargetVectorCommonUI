@@ -6,7 +6,7 @@
 #include "StyleSettings.generated.h"
 
 UENUM(BlueprintType)
-enum class EWidgetSize : uint8
+enum class ESize : uint8
 {
 	ExtraSmall,
 	Small,
@@ -16,7 +16,7 @@ enum class EWidgetSize : uint8
 };
 
 UENUM(BlueprintType)
-enum class EFieldState : uint8
+enum class EFValidationState : uint8
 {
 	Message,
 	Warning,
