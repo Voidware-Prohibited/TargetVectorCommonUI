@@ -8,19 +8,27 @@
 UENUM(BlueprintType)
 enum class ESize : uint8
 {
-	ExtraSmall,
-	Small,
-	Medium,
-	Large,
-	ExtraLarge,
+	ExtraSmall UMETA(DisplayName = "Extra Small"),
+	Small UMETA(DisplayName = "Small"),
+	Medium UMETA(DisplayName = "Medium"),
+	Large UMETA(DisplayName = "Large"),
+	ExtraLarge UMETA(DisplayName = "Extra Large"),
 };
 
 UENUM(BlueprintType)
 enum class EFValidationState : uint8
 {
-	Message,
-	Warning,
-	Error,
+	Message UMETA(DisplayName = "Message"),
+	Warning UMETA(DisplayName = "Warning"),
+	Error UMETA(DisplayName = "Error"),
+};
+
+UENUM(BlueprintType)
+enum class EWidgetCenter : uint8
+{
+	ScreenCenter UMETA(DisplayName = "Screen Center"),
+	MousePosition UMETA(DisplayName = "Mouse Position"),
+	Location UMETA(DisplayName = "Location"),
 };
 
 USTRUCT(BlueprintType)
@@ -182,4 +190,25 @@ struct TARGETVECTORCOMMONUI_API FFieldTextSet
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	FText Disabled;
+};
+
+USTRUCT(BlueprintType)
+struct TARGETVECTORCOMMONUI_API FSpacingSet
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	FVector2D ExtraSmall { 0.0f, 0.0f };
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	FVector2D Small { 0.0f, 0.0f };
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	FVector2D Medium { 00.0f, 0.0f };
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	FVector2D Large { 0.0f, 0.0f };
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	FVector2D ExtraLarge { 0.0f, 0.0f };
 };

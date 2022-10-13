@@ -1,6 +1,5 @@
 // MIT
 
-
 #include "Utility/UIFunctionLibrary.h"
 #include "Engine/UserInterfaceSettings.h"
 
