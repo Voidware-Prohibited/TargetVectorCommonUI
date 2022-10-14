@@ -3,6 +3,7 @@
 #include "Engine/Texture2D.h"
 #include "Engine/EngineTypes.h"
 #include "Styling/SlateColor.h"
+#include "Components/EditableTextBox.h"
 #include "StyleSettings.generated.h"
 
 UENUM(BlueprintType)
@@ -211,4 +212,23 @@ struct TARGETVECTORCOMMONUI_API FSpacingSet
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	FVector2D ExtraLarge { 0.0f, 0.0f };
+};
+
+USTRUCT(BlueprintType)
+struct TARGETVECTORCOMMONUI_API FEditableTextBoxStyleSet
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	FEditableTextBoxStyle Message;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	FEditableTextBoxStyle Warning;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	FEditableTextBoxStyle Error;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	FEditableTextBoxStyle Disabled;
+
 };
