@@ -30,6 +30,37 @@ enum class EWidgetCenter : uint8
 	ScreenCenter UMETA(DisplayName = "Screen Center"),
 	MousePosition UMETA(DisplayName = "Mouse Position"),
 	Location UMETA(DisplayName = "Location"),
+	
+};
+
+UENUM(BlueprintType)
+enum class EHorizontalEnumList : uint8
+{
+	Left UMETA(DisplayName = "Left"),
+	Center UMETA(DisplayName = "Center"),
+	Right UMETA(DisplayName = "Right"),
+};
+
+UENUM(BlueprintType)
+enum class ETimeFormat : uint8
+{
+	TwelveHour UMETA(DisplayName = "12 Hour"),
+	TwentyFourHour UMETA(DisplayName = "24 Hour"),
+};
+
+UENUM(BlueprintType)
+enum class EDateFormat : uint8
+{
+	DayMonthYear UMETA(DisplayName = "DD/MM/YYYY"),
+	YearMonthDay UMETA(DisplayName = "YYYY/MM/DD"),
+	MonthDayYear UMETA(DisplayName = "MM/DD/YYYY"),
+};
+
+UENUM(BlueprintType)
+enum class EMeasurementFormat : uint8
+{
+	Metric UMETA(DisplayName = "Metric"),
+	Imperial UMETA(DisplayName = "Imperial"),
 };
 
 USTRUCT(BlueprintType)
