@@ -3,20 +3,27 @@
 #include "Settings.generated.h"
 
 UENUM(BlueprintType)
-enum class EProfanityLevel : uint8
+enum class EProfanityFilterLevel : uint8
 {
-	Disabled UMETA(DisplayName = "Disabled"),
+	Disabled UMETA(DisplayName = "All Profanity"),
 	Basic UMETA(DisplayName = "Basic"),
 	Medium UMETA(DisplayName = "Medium"),
 	Large UMETA(DisplayName = "Strict"),
 };
 
 UENUM(BlueprintType)
-enum class EGoreLevel : uint8
+enum class EGoreFilterLevel : uint8
 {
-	All UMETA(DisplayName = "All"),
+	Disabled UMETA(DisplayName = "All Gore"),
 	NoGibs UMETA(DisplayName = "No Dismemberment"),
 	NoLongDeath UMETA(DisplayName = "No Long Death and No Dismemberment"),
-	NoBlood UMETA(DisplayName = "No Blood, No Dismemberment, No Long Death"),
+	None UMETA(DisplayName = "None"),
+};
+
+UENUM(BlueprintType)
+enum class ENudityFilterLevel : uint8
+{
+	Disabled UMETA(DisplayName = "All Nudity"),
+	Basic UMETA(DisplayName = "Blurred"),
 	None UMETA(DisplayName = "None"),
 };
