@@ -22,7 +22,9 @@ enum class EFValidationState : uint8
 	Message UMETA(DisplayName = "Message"),
 	Warning UMETA(DisplayName = "Warning"),
 	Error UMETA(DisplayName = "Error"),
+	Count UMETA(Hidden)
 };
+ENUM_RANGE_BY_COUNT(EFValidationState, EFValidationState::Count);
 
 UENUM(BlueprintType)
 enum class EWidgetCenter : uint8

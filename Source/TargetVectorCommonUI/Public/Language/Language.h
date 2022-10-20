@@ -9,4 +9,6 @@ enum class ELanguage : uint8
 	EnglishUK UMETA(DisplayName = "English (European)"),
 	SpanishLT UMETA(DisplayName = "Spanish (American)"),
 	SpanishCS UMETA(DisplayName = "Spanish (European)"),
+	Count UMETA(Hidden)
 };
+ENUM_RANGE_BY_COUNT(ELanguage, ELanguage::Count);
