@@ -14,7 +14,9 @@ enum class ESize : uint8
 	Medium UMETA(DisplayName = "Medium"),
 	Large UMETA(DisplayName = "Large"),
 	ExtraLarge UMETA(DisplayName = "Extra Large"),
+	Count UMETA(Hidden)
 };
+ENUM_RANGE_BY_COUNT(ESize, ESize::Count);
 
 UENUM(BlueprintType)
 enum class EFValidationState : uint8
@@ -32,7 +34,6 @@ enum class EWidgetCenter : uint8
 	ScreenCenter UMETA(DisplayName = "Screen Center"),
 	MousePosition UMETA(DisplayName = "Mouse Position"),
 	Location UMETA(DisplayName = "Location"),
-	
 };
 
 UENUM(BlueprintType)
@@ -48,7 +49,9 @@ enum class ETimeFormat : uint8
 {
 	TwelveHour UMETA(DisplayName = "12 Hour"),
 	TwentyFourHour UMETA(DisplayName = "24 Hour"),
+	Count UMETA(Hidden)
 };
+ENUM_RANGE_BY_COUNT(ETimeFormat, ETimeFormat::Count);
 
 UENUM(BlueprintType)
 enum class EDateFormat : uint8
@@ -56,14 +59,18 @@ enum class EDateFormat : uint8
 	DayMonthYear UMETA(DisplayName = "DD/MM/YYYY"),
 	YearMonthDay UMETA(DisplayName = "YYYY/MM/DD"),
 	MonthDayYear UMETA(DisplayName = "MM/DD/YYYY"),
+	Count UMETA(Hidden)
 };
+ENUM_RANGE_BY_COUNT(EDateFormat, EDateFormat::Count);
 
 UENUM(BlueprintType)
 enum class EMeasurementFormat : uint8
 {
 	Metric UMETA(DisplayName = "Metric"),
 	Imperial UMETA(DisplayName = "Imperial"),
+	Count UMETA(Hidden)
 };
+ENUM_RANGE_BY_COUNT(EMeasurementFormat, EMeasurementFormat::Count);
 
 USTRUCT(BlueprintType)
 struct TARGETVECTORCOMMONUI_API FButtonIconTextures
