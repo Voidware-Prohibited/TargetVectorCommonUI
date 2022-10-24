@@ -17,12 +17,28 @@ UENUM(BlueprintType)
 enum class EGoreFilterLevel : uint8
 {
 	Disabled UMETA(DisplayName = "All Gore"),
-	NoGibs UMETA(DisplayName = "No Dismemberment"),
-	NoLongDeath UMETA(DisplayName = "No Long Death and No Dismemberment"),
+	NoGuts UMETA(DisplayName = "No Guts"),
+	NoDismemberment UMETA(DisplayName = "No Dismemberment"),
+	NoLongDeaths UMETA(DisplayName = "No Long Deaths"),
+	NoGutsNoLongDeaths UMETA(DisplayName = "No Guts, No Long Deaths"),
+	NoGutsNoDismemberment UMETA(DisplayName = "No Guts, No Dismemberment"),
+	NoDismembermentNoLongDeaths UMETA(DisplayName = "No Dismemberment, No Long Deaths"),
 	None UMETA(DisplayName = "None"),
 	Count UMETA(Hidden)
 };
 ENUM_RANGE_BY_COUNT(EGoreFilterLevel, EGoreFilterLevel::Count);
+
+UENUM(BlueprintType)
+enum class EBloodFilterLevel : uint8
+{
+	Disabled UMETA(DisplayName = "All Blood"),
+	ImpactsOnly UMETA(DisplayName = "Impacts Only"),
+	RecoloredBlood UMETA(DisplayName = "Recolored Blood"),
+	RecoloredBloodImpactsOnly UMETA(DisplayName = "Recolored Blood, Impacts Only"),
+	None UMETA(DisplayName = "No Blood"),
+	Count UMETA(Hidden)
+};
+ENUM_RANGE_BY_COUNT(EBloodFilterLevel, EBloodFilterLevel::Count);
 
 UENUM(BlueprintType)
 enum class ENudityFilterLevel : uint8
