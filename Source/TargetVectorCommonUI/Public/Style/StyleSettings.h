@@ -54,6 +54,15 @@ enum class ETimeFormat : uint8
 ENUM_RANGE_BY_COUNT(ETimeFormat, ETimeFormat::Count);
 
 UENUM(BlueprintType)
+enum class ETimePeriod : uint8
+{
+	AM UMETA(DisplayName = "AM"),
+	PM UMETA(DisplayName = "PM"),
+	Count UMETA(Hidden)
+};
+ENUM_RANGE_BY_COUNT(ETimePeriod, ETimePeriod::Count);
+
+UENUM(BlueprintType)
 enum class EDateFormat : uint8
 {
 	DayMonthYear UMETA(DisplayName = "DD/MM/YYYY"),
