@@ -4,6 +4,7 @@
 #include "Engine/EngineTypes.h"
 #include "Styling/SlateColor.h"
 #include "Components/EditableTextBox.h"
+#include "Layout/Margin.h"
 #include "StyleSettings.generated.h"
 
 UENUM(BlueprintType)
@@ -243,6 +244,27 @@ struct TARGETVECTORCOMMONUI_API FFieldTextSet
 };
 
 USTRUCT(BlueprintType)
+struct TARGETVECTORCOMMONUI_API FMarginSet
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	FMargin ExtraSmall { 0.0f, 0.0f, 0.0f, 0.0f };
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	FMargin Small { 0.0f, 0.0f, 0.0f, 0.0f  };
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	FMargin Medium { 0.0f, 0.0f, 0.0f, 0.0f  };
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	FMargin Large { 0.0f, 0.0f, 0.0f, 0.0f  };
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	FMargin ExtraLarge { 0.0f, 0.0f, 0.0f, 0.0f  };
+};
+
+USTRUCT(BlueprintType)
 struct TARGETVECTORCOMMONUI_API FSpacingSet
 {
 	GENERATED_BODY()
@@ -254,13 +276,34 @@ struct TARGETVECTORCOMMONUI_API FSpacingSet
 	FVector2D Small { 0.0f, 0.0f };
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	FVector2D Medium { 00.0f, 0.0f };
+	FVector2D Medium { 0.0f, 0.0f };
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	FVector2D Large { 0.0f, 0.0f };
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	FVector2D ExtraLarge { 0.0f, 0.0f };
+};
+
+USTRUCT(BlueprintType)
+struct TARGETVECTORCOMMONUI_API FFloatSet
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	float ExtraSmall { 0.0f };
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	float Small { 0.0f };
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	float Medium { 0.0f };
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	float Large { 0.0f };
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	float ExtraLarge { 0.0f };
 };
 
 USTRUCT(BlueprintType)
