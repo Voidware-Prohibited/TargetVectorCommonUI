@@ -60,16 +60,3 @@ enum class EColorBlindFilter : uint8
 	Count UMETA(Hidden)
 };
 ENUM_RANGE_BY_COUNT(EColorBlindFilter, EColorBlindFilter::Count);
-
-UENUM(BlueprintType)
-enum class ESpectatorViewMode : uint8
-{
-	KillCam UMETA(DisplayName = "Kill Cam"),
-	FirstPerson UMETA(DisplayName = "First Person"),
-	ThirdPerson UMETA(DisplayName = "Third Person"),
-	ThirdPersonAsItem UMETA(DisplayName = "Third Person As Item"),
-	Fixed UMETA(DisplayName = "Fixed"),
-	NearbyAI UMETA(DisplayName = "Nearby AI"),
-	Count UMETA(Hidden)
-};
-ENUM_RANGE_BY_COUNT(ESpectatorViewMode, ESpectatorViewMode::Count);
