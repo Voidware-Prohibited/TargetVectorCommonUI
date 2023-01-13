@@ -5,6 +5,9 @@
 #include "Styling/SlateColor.h"
 #include "Components/EditableTextBox.h"
 #include "Layout/Margin.h"
+#include "NativeGameplayTags.h"
+#include "CommonButtonBase.h"
+#include "Fonts/SlateFontInfo.h"
 #include "StyleSettings.generated.h"
 
 UENUM(BlueprintType)
@@ -81,6 +84,27 @@ enum class EMeasurementFormat : uint8
 	Count UMETA(Hidden)
 };
 ENUM_RANGE_BY_COUNT(EMeasurementFormat, EMeasurementFormat::Count);
+
+UENUM(BlueprintType)
+enum class EUIColorSlot : uint8
+{
+	Primary UMETA(DisplayName = "Primary"),
+	Background UMETA(DisplayName = "Background"),
+	Confirm UMETA(DisplayName = "Confirm"),
+	Back UMETA(DisplayName = "Back"),
+	Modify UMETA(DisplayName = "Modify"),
+	Delete UMETA(DisplayName = "Delete"),
+	ConfirmAlt UMETA(DisplayName = "Confirm Alt"),
+	Enemy UMETA(DisplayName = "Enemy"),
+	Neutral UMETA(DisplayName = "Neutral"),
+	Self UMETA(DisplayName = "Self"),
+	Fireteam UMETA(DisplayName = "Fireteam"),
+	Command UMETA(DisplayName = "Command"),
+	Section UMETA(DisplayName = "Section"),
+	Organization UMETA(DisplayName = "Organization"),
+	Count UMETA(Hidden)
+};
+ENUM_RANGE_BY_COUNT(EUIColorSlot, EUIColorSlot::Count);
 
 USTRUCT(BlueprintType)
 struct TARGETVECTORCOMMONUI_API FButtonIconTextures
@@ -323,4 +347,25 @@ struct TARGETVECTORCOMMONUI_API FEditableTextBoxStyleSet
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	FEditableTextBoxStyle Disabled;
 
+};
+
+USTRUCT(BlueprintType)
+struct TARGETVECTORCOMMONUI_API FUIAppStyle
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	TSoftObjectPtr<UTexture2D> Logo;
+		
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	TSoftObjectPtr<UTexture2D> Icon;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	FColorSet TextColors;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	FSlateColor BackgroundColor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	TSubclassOf<class UCommonButtonStyle> CommonButtonStyle;
 };
