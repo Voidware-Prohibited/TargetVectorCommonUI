@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f84b06f0146855e5644fd6cd55176f9ce94549a477c03c1d6ef62776dfaca175
-size 388
+#pragma once
+
+#include "Language.generated.h"
+
+UENUM(BlueprintType)
+enum class ELanguage : uint8
+{
+	EnglishUS UMETA(DisplayName = "English (American)"),
+	EnglishUK UMETA(DisplayName = "English (European)"),
+	SpanishLT UMETA(DisplayName = "Spanish (American)"),
+	SpanishCS UMETA(DisplayName = "Spanish (European)"),
+	Count UMETA(Hidden)
+};
+ENUM_RANGE_BY_COUNT(ELanguage, ELanguage::Count);

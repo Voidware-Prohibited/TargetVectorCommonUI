@@ -1,3 +1,50 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4fe8bfdf5ac8aacbe26ab97651cd08134937d8c412b8b8a439cdad844627bb61
-size 1008
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Target Vector Common UI",
+	"Description": "Common UI Content and Templates for Target Vector",
+	"Category": "UI",
+	"CreatedBy": "VOIDWARE Prohibited",
+	"CreatedByURL": "https://github.com/Voidware-Prohibited",
+	"DocsURL": "https://github.com/Voidware-Prohibited/TargetVectorCommonUI",
+	"MarketplaceURL": "",
+	"SupportURL": "https://github.com/Voidware-Prohibited/TargetVectorCommonUI",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "TargetVectorCommonUI",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "CommonUI",
+			"Enabled": true
+		},
+		{
+			"Name": "CommonUser",
+			"Enabled": true
+		},
+		{
+			"Name": "CommonGame",
+			"Enabled": true
+		},
+		{
+			"Name": "TargetVectorEOS",
+			"Enabled": true
+		},
+		{
+			"Name": "ALS",
+			"Enabled": true
+		},
+		{
+			"Name": "ALSXT",
+			"Enabled": true
+		}
+	]
+}

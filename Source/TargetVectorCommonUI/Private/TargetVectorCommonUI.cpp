@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f78c114f9ed864984471e90d9ebe88b773d59fbd4e7faeb38c174fe68efc6c02
-size 652
+// Copyright Epic Games, Inc. All Rights Reserved.
+
+#include "TargetVectorCommonUI.h"
+
+#define LOCTEXT_NAMESPACE "FTargetVectorCommonUIModule"
+
+void FTargetVectorCommonUIModule::StartupModule()
+{
+	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
+}
+
+void FTargetVectorCommonUIModule::ShutdownModule()
+{
+	// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
+	// we call this function before unloading the module.
+}
+
+#undef LOCTEXT_NAMESPACE
+	
+IMPLEMENT_MODULE(FTargetVectorCommonUIModule, TargetVectorCommonUI)
