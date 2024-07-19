@@ -39,10 +39,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "TargetVectorContent",
-			"Enabled": true
-		},
-		{
 			"Name": "ALS",
 			"Enabled": true
 		},
