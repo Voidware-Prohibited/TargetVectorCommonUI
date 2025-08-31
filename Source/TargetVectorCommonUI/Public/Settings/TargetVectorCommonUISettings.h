@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Settings.generated.h"
+#include "TargetVectorCommonUISettings.generated.h"
 
 UENUM(BlueprintType)
 enum class EHandedness : uint8
